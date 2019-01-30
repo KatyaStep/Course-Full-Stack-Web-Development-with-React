@@ -32,9 +32,13 @@
         
                 </ul> 
                 <span class="navbar-text">
+                    <!--
                     <a data-toggle="modal" data-target="#loginModal">
                         <span class="fa fa-sign-in"></span>Login
-                    </a>
+                    </a>-->
+
+                    <!--Assignment 4 Delete data attribute  from Login link-->
+                    <a id="login"><span class="fa fa-sign-in"></span>Login</a>
                 </span>              
             </div>
         </div>
@@ -94,37 +98,37 @@
                         <label for="numberofguests" class="col-md-2  col-form-label">Number of Guests</label>
                         <div class="col-md-8">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio"  id="numberofguests" name="numberofguests">
+                                <input class="form-check-input" type="radio"  id="numberofguests1" name="numberofguests">
                                 <label class="form-check-label" for="numberofguests">
                                         1
                                 </label>
                             </div>
                             <div class=" form-check form-check-inline">
-                                <input class="form-check-input" type="radio"  id="numberofguests" name="numberofguests">
+                                <input class="form-check-input" type="radio"  id="numberofguests2" name="numberofguests">
                                 <label class="form-check-label" for="numberofguests">
                                     2
                                 </label>
                             </div>
                             <div class="  form-check form-check-inline">
-                                <input class="form-check-input" type="radio"  id="numberofguests" name="numberofguests">
+                                <input class="form-check-input" type="radio"  id="numberofguests3" name="numberofguests">
                                 <label class="form-check-label" for="numberofguests">
                                     3
                                 </label>
                             </div>  
                             <div class=" form-check form-check-inline">
-                                <input class="form-check-input" type="radio"  id="numberofguests" name="numberofguests">
+                                <input class="form-check-input" type="radio"  id="numberofguests4" name="numberofguests">
                                 <label class="form-check-label" for="numberofguests">
                                     4
                                 </label>
                             </div>
                             <div class=" form-check form-check-inline">
-                                <input class="form-check-input" type="radio"  id="numberofguests" name="numberofguests">
+                                <input class="form-check-input" type="radio"  id="numberofguests5" name="numberofguests">
                                 <label class="form-check-label" for="numberofguests">
                                     5
                                 </label>
                             </div>
                             <div class=" form-check form-check-inline">
-                                <input class="form-check-input" type="radio"  id="numberofguests" name="numberofguests">
+                                <input class="form-check-input" type="radio"  id="numberofguests6" name="numberofguests">
                                 <label class="form-check-label" for="numberofguests">
                                     6
                                 </label>
@@ -180,8 +184,12 @@
                 </div>
                 <div class="col-12 col-sm-3  align-self-center">
                     <!--Assignment 3 Update Reserve Button -->
-                    <a role="button" class="btn btn-warning btn-sm btn-block"
+                    <!--<a role="button" class="btn btn-warning btn-sm btn-block"
                         data-toggle="modal" data-target="#reserveModal">Reserve Table
+                    </a> -->
+
+                    <!--Assignment 4 Delete data attributes from Reserve Table btn-->
+                     <a role="button" id="reserveButton" class="btn btn-warning btn-sm btn-block">Reserve Table
                     </a>
                 </div>
             </div>
@@ -353,6 +361,16 @@
                     $('#carouselButton').children('span').addClass('fa-pause')
                 };
             });
+        })
+    </script>
+
+    <!-- Assignment 4 Script -->
+    <script>
+        $("#reserveButton").click(function(){
+            $("#reserveModal").modal("toggle");
+        })
+        $("#login").click(function(){
+            $("#loginModal").modal("toggle");
         })
     </script>
 </body>
