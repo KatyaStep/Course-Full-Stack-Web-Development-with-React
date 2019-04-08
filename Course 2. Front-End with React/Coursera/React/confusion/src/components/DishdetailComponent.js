@@ -11,11 +11,11 @@ class DishDetail extends Component {
 
       console.log(this.props.dish.name);
 
-      const comments = this.props.dish.comments.map((comment) => {
+      const comments = this.props.dish.comments.map((item) => {
           return (
-            <div key={comment.id}>
-              <p>{comment.comment}</p>
-              <p> -- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+            <div key={item.id}>
+              <p>{item.comment}</p>
+              <p> -- {item.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(item.date)))}</p>
             </div>
           );
       });
